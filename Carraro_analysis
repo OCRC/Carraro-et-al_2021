@@ -1,0 +1,42 @@
+# Reproducing the single-cell RNA sequencing analysis shown in Carraro et al, 2021.
+
+# In this study, we harnessed the data from [Campbell et al](https://doi.org/10.1038/nn.4495), consisting of ~20,000 single-cell transcriptomes from the arcuate nucleus and the median eminence (Arc-ME).
+
+# Download needed data and metadata: sign in and download
+
+# Expression data:
+# https://singlecell.broadinstitute.org/single_cell/data/public/SCP97/a-molecular-census-of-arcuate-hypothalamus-and-median-eminence-cell-types?filename=expression.txt.gz
+
+# Metadata:
+# https://singlecell.broadinstitute.org/single_cell/data/public/SCP97/a-molecular-census-of-arcuate-hypothalamus-and-median-eminence-cell-types?filename=meta.txt
+
+# Or download directly from the UNIX terminal:
+# Data:
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE93nnn/GSE93374/suppl/GSE93374_Merged_all_020816_DGE.txt.gz -O expression.txt.gz
+
+# Metadata:
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE93nnn/GSE93374/suppl/GSE93374_cell_metadata.txt.gz -O meta.txt.gz
+
+# Note that both these files must be in the same directory as the scripts (our working directory, or where you cloned the repo to), and should be named 'expression.txt.gz' and 'meta.txt.gz'.
+
+# Now analyze the data using the provided R script:
+
+> R Carraro_et_al_2021_Campbell_Data_Analysis.R
+
+
+# Script for running Arboreto and PySCENIC on Campbell's arcuate neurons (scRNAseq data)
+
+arboreto_with_multiprocessing.py \
+    CampNeurons.tsv \
+    mm_mgi_tfs.txt \
+    --method grnboost2 \
+    --output adj.tsv \
+    --num_workers 20 \
+    --seed 777
+    
+
+# For this step, you should download some databases: https://pyscenic.readthedocs.io/en/latest/installation.html#auxiliary-datasets
+
+pyscenic ctx adj.tsv --annotations_fname /home/davisidarta/SCENIC/resources/motifs-v9-nr.mgi-m0.001-o0.0.tbl --expression_mtx_fname CampNeurons.loom --output arc_reg.csv --num_workers 64 --min_genes 10  databases/mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather databases/mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather databases/mm9-tss-centered-10kb-10species.mc9nr.feather databases/mm9-tss-centered-5kb-10species.mc9nr.feather databases/mm9-500bp-upstream-10species.mc9nr.feather
+
+
