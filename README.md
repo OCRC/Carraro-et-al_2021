@@ -1,5 +1,4 @@
-# Carraro-et-al_2021
-This repository contains open-source code for reproducing the analysis of single-cell RNA sequencing data exposed in Carraro et al
+This repository contains open-source code for reproducing the analysis of single-cell RNA sequencing data exposed in the manuscript 'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al., accepted at the Journal of Neuroscience (In press).
 
 In this study, we harnessed the data from [Campbell et al](https://doi.org/10.1038/nn.4495), consisting of ~20,000 single-cell transcriptomes from the arcuate nucleus and the median eminence (Arc-ME).
 
@@ -21,7 +20,7 @@ In this study, we harnessed the data from [Campbell et al](https://doi.org/10.10
 
 # Single-cell analysis with dbMAP
 
-  For this step, you'll need to have (dbMAP)[https://github.com/davisidarta/dbMAP] installed.
+  For this step, you'll need to have (dbMAP)[https://github.com/davisidarta/dbMAP] installed, along with (Seurat)[https://satijalab.org/seurat] for single-cell analysis in R.
   Main findings can be reproduced by executing the following line in the terminal:
   
   ```
@@ -55,3 +54,20 @@ Additional code that could not be easily pipelined is also available at this rep
 
 Please send any questions and/or bug reports to davisidarta[at]fcm.unicamp.br
 
+
+# Citation
+  If these scripts are useful for you research, we ask that you cite: 
+  
+  ```
+  
+  'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al. (doi TBD)
+  
+  ```
+  
+  If dbMAP is useful for your research, please cite:
+  
+  ```
+  
+Sidarta-Oliveira, Davi and Velloso, Licio, Comprehensive Visualization of High-Dimensional Single-Cell Data With Diffusion-Based Manifold Approximation and Projection (dbMAP). Available at SSRN: https://ssrn.com/abstract=3582067 or http://dx.doi.org/10.2139/ssrn.3582067
+  
+  ```
