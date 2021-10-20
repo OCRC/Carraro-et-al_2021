@@ -34,7 +34,9 @@ In this study, we harnessed the data from [Campbell et al](https://doi.org/10.10
   For this step, you should download some databases: https://pyscenic.readthedocs.io/en/latest/installation.html#auxiliary-datasets
   
   To run arboreto, execute the following snippets in the terminal: 
-    ```
+  
+  
+```
 arboreto_with_multiprocessing.py \
     CampNeurons.tsv \
     mm_mgi_tfs.txt \
@@ -42,7 +44,9 @@ arboreto_with_multiprocessing.py \
     --output adj.tsv \
     --num_workers 20 \
     --seed 777
-    ```
+```
+    
+    
  And
  
  ```
@@ -56,18 +60,13 @@ Please send any questions and/or bug reports to davisidarta[at]fcm.unicamp.br
 
 
 # Citation
+
   If these scripts are useful for you research, we ask that you cite: 
   
-  ```
-  
-  'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al. (doi TBD)
-  
-  ```
+  Carraro, R; Nogueira, G; Sidarta-Oliveira, D _et al_. Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior'. The Journal of Neuroscience.
   
   If dbMAP is useful for your research, please cite:
+    
+  Sidarta-Oliveira, D and Velloso, L. Comprehensive Visualization of High-Dimensional Single-Cell Data With Diffusion-Based Manifold Approximation and Projection (dbMAP).
+  Available at SSRN: https://ssrn.com/abstract=3582067 or http://dx.doi.org/10.2139/ssrn.3582067
   
-  ```
-  
-Sidarta-Oliveira, Davi and Velloso, Licio, Comprehensive Visualization of High-Dimensional Single-Cell Data With Diffusion-Based Manifold Approximation and Projection (dbMAP). Available at SSRN: https://ssrn.com/abstract=3582067 or http://dx.doi.org/10.2139/ssrn.3582067
-  
-  ```
