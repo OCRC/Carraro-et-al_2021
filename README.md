@@ -1,4 +1,4 @@
-This repository contains open-source code for reproducing the analysis of single-cell RNA sequencing data exposed in the manuscript 'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al., (published at the Journal of Neuroscience)[https://doi.org/10.1523/JNEUROSCI.0222-21.2021].
+This repository contains open-source code for reproducing the analysis of single-cell RNA sequencing data exposed in the manuscript 'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al., [published at the Journal of Neuroscience](https://doi.org/10.1523/JNEUROSCI.0222-21.2021).
 
 In this study, we harnessed the data from [Campbell et al](https://doi.org/10.1038/nn.4495), consisting of ~20,000 single-cell transcriptomes from the arcuate nucleus and the median eminence (Arc-ME), and used it to identify Nhlh2 transcriptional targets.
 
