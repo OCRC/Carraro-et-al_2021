@@ -1,6 +1,6 @@
-This repository contains open-source code for reproducing the analysis of single-cell RNA sequencing data exposed in the manuscript 'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al., accepted at the Journal of Neuroscience (In press).
+This repository contains open-source code for reproducing the analysis of single-cell RNA sequencing data exposed in the manuscript 'Arcuate nucleus overexpression of Nhlh2 reduces body mass and attenuates obesity-associated anxiety/depression-like behavior', by Carraro et al., (published at the Journal of Neuroscience)[https://doi.org/10.1523/JNEUROSCI.0222-21.2021].
 
-In this study, we harnessed the data from [Campbell et al](https://doi.org/10.1038/nn.4495), consisting of ~20,000 single-cell transcriptomes from the arcuate nucleus and the median eminence (Arc-ME).
+In this study, we harnessed the data from [Campbell et al](https://doi.org/10.1038/nn.4495), consisting of ~20,000 single-cell transcriptomes from the arcuate nucleus and the median eminence (Arc-ME), and used it to identify Nhlh2 transcriptional targets.
 
 # Retrieve data
   We retrieved gene expression and meta-data matrices from SingleCellPortal. You'll need to sign in with a Google account to continue:
@@ -50,7 +50,7 @@ arboreto_with_multiprocessing.py \
  And
  
  ```
-pyscenic ctx adj.tsv --annotations_fname /home/davisidarta/SCENIC/resources/motifs-v9-nr.mgi-m0.001-o0.0.tbl --expression_mtx_fname CampNeurons.loom --output arc_reg.csv --num_workers 64 --min_genes 10  databases/mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather databases/mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather databases/mm9-tss-centered-10kb-10species.mc9nr.feather databases/mm9-tss-centered-5kb-10species.mc9nr.feather databases/mm9-500bp-upstream-10species.mc9nr.feather
+pyscenic ctx adj.tsv --annotations_fname SCENIC/resources/motifs-v9-nr.mgi-m0.001-o0.0.tbl --expression_mtx_fname CampNeurons.loom --output arc_reg.csv --num_workers 64 --min_genes 10  databases/mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather databases/mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather databases/mm9-tss-centered-10kb-10species.mc9nr.feather databases/mm9-tss-centered-5kb-10species.mc9nr.feather databases/mm9-500bp-upstream-10species.mc9nr.feather
 ```
 
 Additional code that could not be easily pipelined is also available at this repository.
