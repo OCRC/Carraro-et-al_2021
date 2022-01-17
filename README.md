@@ -4,8 +4,8 @@ In this study, we harnessed the data from [Campbell et al](https://doi.org/10.10
 
 # Retrieve data
   We retrieved gene expression and meta-data matrices from SingleCellPortal. You'll need to sign in with a Google account to continue:
-  - (Gene expression data)[https://singlecell.broadinstitute.org/single_cell/data/public/SCP97/a-molecular-census-of-arcuate-hypothalamus-and-median-eminence-cell-types?filename=expression.txt.gz]
-  - (Metadata)[https://singlecell.broadinstitute.org/single_cell/data/public/SCP97/a-molecular-census-of-arcuate-hypothalamus-and-median-eminence-cell-types?filename=meta.txt]
+  - [Gene expression data](https://singlecell.broadinstitute.org/single_cell/data/public/SCP97/a-molecular-census-of-arcuate-hypothalamus-and-median-eminence-cell-types?filename=expression.txt.gz)
+  - [Metadata](https://singlecell.broadinstitute.org/single_cell/data/public/SCP97/a-molecular-census-of-arcuate-hypothalamus-and-median-eminence-cell-types?filename=meta.txt)
 
   Alternatively, download directly from the UNIX (Linux, MacOS) terminal:
   ```
@@ -20,13 +20,13 @@ In this study, we harnessed the data from [Campbell et al](https://doi.org/10.10
 
 # Single-cell analysis with dbMAP
 
-  For this step, you'll need to have (dbMAP)[https://github.com/davisidarta/dbMAP] installed, along with (Seurat)[https://satijalab.org/seurat] for single-cell analysis in R.
+  For this step, you'll need to have [dbMAP](https://github.com/davisidarta/dbMAP) installed, along with [Seurat](https://satijalab.org/seurat) for single-cell analysis in R.
   Main findings can be reproduced by executing the following line in the terminal:
   
   ```
-  > R Carraro_et_al_2021_Campbell_Data_Analysis.R
+  > R Zanesco_et_al_2022_Campbell_data_analysis.R
   ```
-  Alternatively, you may open the `Carraro_et_al_2021_Campbell_Data_Analysis.R` script in your favorite IDE (i.g. RStudio) and interactively navigate the code.
+  Alternatively, you may open the `Zanesco_et_al_2022_Campbell_data_analysis.R` script in your favorite IDE (i.g. RStudio) and interactively navigate the code.
   
   
 # Running Arboreto and PySCENIC
